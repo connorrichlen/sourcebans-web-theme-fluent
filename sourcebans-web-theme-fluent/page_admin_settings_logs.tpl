@@ -1,14 +1,19 @@
 <div class="admin_tab_content_title">
-    <h2>System Log {$clear_logs}</h2>
+    <h2><i class="far fa-hdd"></i> System Logs</h2>
+</div>
+{php} require (TEMPLATES_PATH . "/admin.log.search.php");{/php}
+
+<div class="layout_box padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
+    <span>
+        <i>{$clear_logs}</i>
+    </span>
+        <div class="pagination">
+            <span>{$page_numbers}</span>
+        </div>
 </div>
 
 <div class="padding">
-    {php} require (TEMPLATES_PATH . "/admin.log.search.php");{/php}
-
-    <div class="pagination">
-        <span>{$page_numbers}</span>
-    </div>
-
+    
     <div class="table table_box">
         <table>
             <thead>
