@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2>Import Bans</h2>
+        <h2><i class="fas fa-file-import"></i> Import Bans</h2>
     </div>
 
     <div class="padding">

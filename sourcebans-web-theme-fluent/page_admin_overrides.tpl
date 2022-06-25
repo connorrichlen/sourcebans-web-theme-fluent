@@ -14,7 +14,7 @@
         </section>
     {else}
         <div class="admin_tab_content_title">
-            <h2>Overrides</h2>
+            <h2><i class="fas fa-cogs"></i> Overrides</h2>
         </div>
 
         <div class="padding">

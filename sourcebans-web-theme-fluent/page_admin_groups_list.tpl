@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2>Groups</h2>
+        <h2><i class="fas fa-users"></i> Groups</h2>
     </div>
 
     <div class="padding">
@@ -21,7 +21,7 @@
             Click on a group to view its permissions.
         </div>
 
-        <h3>Web Admin Groups ({$web_group_count})</h3>
+        <h3 style="color: var(--table-permanent-text);">Web Admin Groups ({$web_group_count})</h3>
 
         <div class="table table_box">
             <table>
@@ -117,8 +117,7 @@
                 </tbody>
             </table>
         </div>
-
-        <h3>Server Admin Groups ({$server_admin_group_count})</h3>
+        	<h3 style="color: var(--table-unbanned-text);">Server Admin Groups ({$server_admin_group_count})</h3>
 
         <div class="table table_box">
             <table>

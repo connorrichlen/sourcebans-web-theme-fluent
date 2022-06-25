@@ -3,7 +3,7 @@
         Access Denied
     {else}
         <div class="admin_tab_content_title">
-            <h2>Admins - {$admin_count}</h2>
+            <h2><i class="fas fa-user-shield"></i> Admins - {$admin_count}</h2>
         </div>
 
         <div class="padding">

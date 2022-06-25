@@ -1,7 +1,7 @@
 <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box layout_box_medium">
         <div class="layout_box_title">
-            <h2>Submit a Report</h2>
+            <h2><i class="fas fa-flag-checkered"></i> Submit a Report</h2>
         </div>
 
         <div class="padding">

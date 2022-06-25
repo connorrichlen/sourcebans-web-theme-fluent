@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2>Add Block</h2>
+        <h2><i class="fas fa-microphone-alt-slash"></i> Add Block</h2>
     </div>
 
     <div class="padding">

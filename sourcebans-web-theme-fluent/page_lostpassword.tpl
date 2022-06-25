@@ -1,7 +1,7 @@
 <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box_small layout_box">
         <div class="layout_box_title">
-            <h2>Lost your password</h2>
+            <h2><i class="fas fa-key"></i> Lost your password</h2>
         </div>
         <div class="padding">
             <div class="margin-bottom:half">

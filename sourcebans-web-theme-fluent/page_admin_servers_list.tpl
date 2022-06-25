@@ -3,7 +3,7 @@
         Access Denied
     {else}
         <div class="admin_tab_content_title">
-            <h2>Servers (<span id="srvcount">{$server_count}</span>)</h2>
+            <h2><i class="fas fa-server"></i> Servers (<span id="srvcount">{$server_count}</span>)</h2>
         </div>
 
         <div class="padding">

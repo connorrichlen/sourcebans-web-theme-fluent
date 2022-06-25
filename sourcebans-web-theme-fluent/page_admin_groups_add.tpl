@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2>New Group</h2>
+        <h2><i class="fas fa-users"></i> New Group</h2>
     </div>
 
     <div class="padding">

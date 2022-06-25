@@ -1,6 +1,6 @@
 <div class="layout_box flex:11 admin_tab_content">
     <div class="admin_tab_content_title">
-        <h2>Admin Server Access</h2>
+        <h2><i class="fas fa-server"></i> Admin Server Access</h2>
     </div>
 
     <div class="padding">

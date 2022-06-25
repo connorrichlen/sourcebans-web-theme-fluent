@@ -1,4 +1,4 @@
-<h3>Email Player  <i>({$email_addr})</i></h3>
+<h3><i class="fas fa-envelope"></i> Email Player  <i>({$email_addr})</i></h3>
 <table width="90%" style="border-collapse:collapse;" id="group.details" cellpadding="3">
 	<tr>
     	<td valign="top" width="35%">

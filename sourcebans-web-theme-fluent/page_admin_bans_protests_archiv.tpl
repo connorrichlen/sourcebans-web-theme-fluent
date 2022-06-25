@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2>Ban Protests Archive (<span id="protcountarchiv">{$protest_count_archiv}</span>)</h2>
+        <h2><i class="fas fa-archive"></i> Ban Protests Archive (<span id="protcountarchiv">{$protest_count_archiv}</span>)</h2>
     </div>
 
     <div class="padding">

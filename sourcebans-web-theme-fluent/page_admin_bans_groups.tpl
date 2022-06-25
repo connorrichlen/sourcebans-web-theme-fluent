@@ -15,7 +15,7 @@
     {if NOT $groupbanning_enabled}
         This feature is disabled! Only follow links!
     {else}
-        <h3>Add Group Ban</h3>
+        <h3><i class="fas fa-users-slash"></i> Add Group Ban</h3>
         {if NOT $list_steam_groups}
             Here you can add a ban for a whole steam community group.<br />
             e.g. <code>http://steamcommunity.com/groups/interwavestudios</code><br /><br />

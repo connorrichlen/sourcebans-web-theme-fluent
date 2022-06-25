@@ -9,7 +9,7 @@
             <i>Redirecting back to bans page</i>
         </div>
         <div class="admin_tab_content_title">
-            <h2>Ban Details</h2>
+            <h2><i class="fas fa-user-edit"></i> Ban Details</h2>
 		</div>
 		<div class="padding">
             For more information or help regarding a certain subject move your mouse over the question mark.<br /><br />

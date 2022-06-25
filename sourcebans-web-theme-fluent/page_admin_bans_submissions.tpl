@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2>Ban Submissions (<span id="subcount">{$submission_count}</span>)</h2>
+        <h2><i class="fas fa-gavel"></i> Ban Submissions (<span id="subcount">{$submission_count}</span>)</h2>
     </div>
 
     <div class="padding">

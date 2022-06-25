@@ -1,5 +1,5 @@
 <div class="admin_tab_content_title">
-    <h2>Ban Features</h2>
+    <h2><i class="fas fa-cogs"></i> Sourcebans++ Features</h2>
 </div>
 
 <div class="padding">

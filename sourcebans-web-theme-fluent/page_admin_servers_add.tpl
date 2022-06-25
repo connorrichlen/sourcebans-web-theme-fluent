@@ -3,7 +3,7 @@
         Access Denied
     {else}
         <div class="admin_tab_content_title">
-            <h2>Server Details</h2>
+            <h2><i class="fas fa-plus"></i> Server Details</h2>
         </div>
 
         <div class="padding">

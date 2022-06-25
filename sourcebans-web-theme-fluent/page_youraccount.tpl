@@ -1,6 +1,6 @@
 <div class="layout_box flex:11 admin_tab_content tabcontent" id="View Permissions" style="display: block;">
     <div class="admin_tab_content_title">
-        <h2>Your Permissions</h2>
+        <h2><i class="fas fa-address-card"></i> Your Permissions</h2>
     </div>
 
     <div class="padding">
@@ -10,7 +10,7 @@
 
         <div class="flex m:flex-fd:column">
             <div class="flex:11">
-                <h3>Web Permissions</h3>
+                <h3 style="color: var(--table-permanent-text);">Web Permissions</h3>
 
                 <ul>
                     -{if $web_permissions}-
@@ -24,7 +24,7 @@
             </div>
 
             <div class="flex:11">
-                <h3>Server Permissions</h3>
+                <h3 style="color: var(--table-unbanned-text);">Server Permissions</h3>
 
                 <ul>
                     -{if $server_permissions}-
@@ -42,7 +42,7 @@
 
 <div class="layout_box flex:11 admin_tab_content tabcontent" id="Change Password">
     <div class="admin_tab_content_title">
-        <h2>Change Password</h2>
+        <h2><i class="fas fa-key"></i> Change Password</h2>
     </div>
 
     <div class="padding">
@@ -103,7 +103,7 @@
 
 <div class="layout_box flex:11 admin_tab_content tabcontent" id="Server Password">
     <div class="admin_tab_content_title">
-        <h2>Change Server Password</h2>
+        <h2><i class="fab fa-steam-symbol"></i> Change Server Password</h2>
     </div>
 
     <div class="padding">
@@ -192,7 +192,7 @@
 
 <div class="layout_box flex:11 admin_tab_content tabcontent" id="Change Email">
     <div class="admin_tab_content_title">
-        <h2>Change E-Mail</h2>
+        <h2><i class="fas fa-envelope"></i> Change E-Mail</h2>
     </div>
 
     <div class="padding">

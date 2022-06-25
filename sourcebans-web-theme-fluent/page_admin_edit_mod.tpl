@@ -1,5 +1,5 @@
 <div class="admin_tab_content_title">
-    <h2>Mod Details</h2>
+    <h2><i class="fas fa-cogs"></i> Mod Details</h2>
 </div>
 
 <div class="padding">

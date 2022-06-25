@@ -1,10 +1,10 @@
 <div class="admin_tab_content_title">
-    <h2>Themes</h2>
+    <h2><i class="fas fa-paint-roller"></i> Selected Theme :</h2>
 </div>
 
 <div class="padding">
     <div class="margin-bottom">
-        <span class="text:bold">Selected Theme:</span> <span id="theme.name">{$theme_name}</span>
+        <h2 id="theme.name">{$theme_name}</h2>
     </div>
 
     <div class="flex m:flex-fd:column" id="current-theme-details">
