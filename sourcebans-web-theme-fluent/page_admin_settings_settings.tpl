@@ -1,7 +1,7 @@
 <form action="" method="post">
     <input type="hidden" name="settingsGroup" value="mainsettings" />
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-sliders-h"></i> Main Settings</h2>
+        <h2><i class="fas fa-cogs"></i> Main Settings</h2>
     </div>
 
     <div class="padding">
@@ -118,7 +118,7 @@
     </div>
 
     <div class="admin_tab_content_title">
-        <h2>Dashboard Settings</h2>
+        <h2><i class="fas fa-home"></i>Dashboard Settings</h2>
     </div>
 
     <div class="padding">
@@ -164,7 +164,7 @@
     </div>
 
     <div class="admin_tab_content_title">
-        <h2>Page Settings</h2>
+        <h2><i class="fas fa-sliders-h"></i> Page Settings</h2>
     </div>
 
     <div class="padding">
@@ -252,7 +252,7 @@
     </div>
 
     <div class="admin_tab_content_title">
-        <h2>Banlist Settings</h2>
+        <h2><i class="fas fa-ban"></i> Banlist Settings</h2>
     </div>
 
     <div class="padding">
