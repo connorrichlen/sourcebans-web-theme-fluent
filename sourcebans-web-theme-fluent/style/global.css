@@ -524,7 +524,7 @@ a:hover {
 
 .message::before {
   content: '\f129';
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'Font Awesome 6 Free';
   font-weight: bold;
   position: absolute;
   top: 16px;
@@ -925,7 +925,7 @@ a:hover {
 
 .nav ul li a::before {
   content: '\f0c9';
-  font-family: 'font awesome 5 free';
+  font-family: 'Font Awesome 6 Free';
   font-size: 14px;
   font-weight: 700;
   margin-right: 3px;
@@ -1051,7 +1051,7 @@ a:hover {
 
 .nav_mobile_tab_nav ul li a::before {
   content: '\f0c9';
-  font-family: 'font awesome 5 free';
+  font-family: 'Font Awesome 6 Free';
   font-size: 14px;
   font-weight: 700;
   margin-right: 3px;
@@ -2212,7 +2212,7 @@ hr {
 /* ================ JSColor ================ */
 .jscolor::before {
   content: '\f1fc';
-  font-family: 'font awesome 5 free';
+  font-family: 'Font Awesome 6 Free';
   font-weight: 700;
 }
 
