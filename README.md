@@ -10,7 +10,7 @@ Fluent Design Theme Edition is a combination of Fluent Design styles Microsoft, 
 ## Install 🧰
 1. Download all files from repository or clone:
 ```
-git clone https://github.com/aXenDeveloper/sourcebans-web-theme-fluent
+git clone https://github.com/Rushaway/sourcebans-web-theme-fluent.git
 ```
 2. Move **sourcebans-web-theme-fluent** folder to Your Sourcebans -> **themes**;
 3. Go to (Website): AdminCP -> Web Panel -> **Themes**;
