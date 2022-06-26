@@ -9,14 +9,15 @@
 	    </div>
 	    <div class="flex flex-fd:column text:right">
 	      <span>Copyright © (website name)</span>
-	      <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">Theme by aXenDev</a>
+	      <span><i class="fas fa-code"></i> Original Theme by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">aXenDev</a></span>
+		  <span>Edited by <a href="https://github.com/Rushaway/" title="Rushaway's GitHub Profile" target="_blank" rel="noopener">.Rushaway </a>with <i class="fas fa-beer" title="Beer"></i></span>
 	    </div>
 	  </div>
 	</footer>
 
-	<script type="text/javascript" src="themes/sourcebans-web-theme-fluent/scripts/nav.js"></script>
-	<script type="text/javascript" src="themes/sourcebans-web-theme-fluent/scripts/jscolor.min.js"></script>
-	<script type="text/javascript" src="themes/sourcebans-web-theme-fluent/scripts/theme.js"></script>
+	<script type="text/javascript" src="themes/{$theme}/scripts/nav.js"></script>
+	<script type="text/javascript" src="themes/{$theme}/scripts/jscolor.min.js"></script>
+	<script type="text/javascript" src="themes/{$theme}/scripts/theme.js"></script>
 
 	<script>
 	  {$query}
