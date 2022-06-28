@@ -67,9 +67,10 @@
         </div>
         <div class="padding">
             <ul class="list-reset">
-                <li>Total bans: <span class="text:bold">{$total_bans}</span></li>
-				<li>Connections blocked: <span class="text:bold">{$total_blocks}</span></li>
-				<li>Total comms blocks: <span class="text:bold"> Please wait...{$total_comms}</span></li> 
+                <!-- WARNING: To fully fix this part use https://github.com/Rushaway/sourcebans-pp/commit/f05a4bcdfa59002970daeb0b8231ffc1b13c834c -->
+                <li>Total bans : <span class="text:bold">{$total_bans}</span></li>
+                <li>Total comms : <span class="text:bold">{$total_comms}</span></li>
+                <li>Connections blocked : <span class="text:bold">{$total_blocks}</span></li>
             </ul>
         </div>
     </div>
@@ -118,8 +119,8 @@
         </div>
         <div class="padding" align="center">
             <ul class="list-reset">
-                <li><span class="text:bold" style="font-size:x-large"> <i>{$total_servers}</i></span> Servers are currently registred on SourceBans</li>
-				<li><span class="text:bold" style="font-size:x-large"> <i>{$demosize}</i></span> Is the total size of all demos hosted</li>
+				<li>We have a total of <span class="text:bold" style="font-size:x-large"> <i style="color:#dd6b20">{$total_servers}</i></span> servers registred on SourceBans.</li>
+				<li>Total demo size is<span class="text:bold" style="font-size:x-large"> <i style="color:#dd6b20">{$demosize}</i></span> hosted on our WebServer.</li>
             </ul>
         </div>
     </div>
