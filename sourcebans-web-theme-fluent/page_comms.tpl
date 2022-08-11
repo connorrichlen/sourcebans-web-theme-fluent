@@ -2,7 +2,7 @@
   <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box layout_box_medium">
       <div class="layout_box_title">
-        <h2>{$commenttype} Comment</h2>
+        <h2><i class="fa-solid fa-comment"></i> {$commenttype} Comment</h2>
       </div>
 
       <div class="padding">
@@ -22,8 +22,8 @@
 
           <input type="hidden" name="page" id="page" value="{$page}">
 
-          <a class="button button-light" onclick="history.go(-1)">Cancel</a>
-		  <a class="button button-primary" onclick="ProcessComment();">Add</a>
+          <a class="button button-important" onclick="history.go(-1)">Cancel</a>
+		  <a class="button button-success" onclick="ProcessComment();">Add</a>
         </div>
       </div>
     </div>
@@ -48,8 +48,8 @@
           <thead>
             <tr>
               <th>MOD/Type</th>
-              <th class="text:left">Player</th>
               <th class="text:left">Date</th>
+              <th class="text:left">Player</th>
               {if !$hideadminname}
                 <th class="text:left">Admin</th>
               {/if}
@@ -58,22 +58,25 @@
           </thead>
           <tbody>
             {foreach from=$ban_list item=ban name=banlist}
-			<tr class="collapse" {if $ban.server_id != 0}
+                        <tr class="collapse" {if $ban.server_id != 0}
 						onclick="xajax_ServerHostPlayers({$ban.server_id}, 'id', 'host_{$ban.ban_id}');"
 						{/if}
 						>
               <tr class="collapse">
                 <td class="text:center">{$ban.mod_icon}</td>
-                <td>
+				<td>{$ban.ban_date}</td>
                   {if empty($ban.player)}
-                    <span class="text:italic">No nickname present</span>
+                    <td class="text:italic">No nickname present</td>
                   {else}
-                    <span>
-                      {$ban.player|escape:'html'|stripslashes}
-                    </span>
+				  <td>
+                    {if $view_comments && $ban.commentdata != "None" && $ban.commentdata|@count > 0}
+                        <div style="float:right;">
+                            {$ban.commentdata|@count} <i class="fas fa-clipboard-list fa-lg"></i>
+                        </div>
+                    {/if}
+                    {$ban.player|escape:'html'|stripslashes}
+                    </td>
                   {/if}
-                </td>
-                <td>{$ban.ban_date}</td>
 
                 {if !$hideadminname}
                   <td>
@@ -95,29 +98,28 @@
                   <div class="collapse_content">
                     <div class="padding flex flex-jc:start">
                       <ul class="ban_action responsive_show:desktop">
-			{if $view_bans}
-				{if $ban.unbanned && $ban.reban_link != false}
-                          		<li class="button button-important">{$ban.reban_link}</li>
-                        	{/if}
-				{if $view_comments}
-                        		<li class="button button-success">{$ban.addcomment}</li>
-				{/if}
-                        	{if ($ban.view_edit && !$ban.unbanned)}
-                          		<li class="button button-light">{$ban.edit_link}</li>
-                        	{/if}
-				{if ($ban.unbanned == false && $ban.view_unban)}
-                          		<li class="button button-light">{$ban.unban_link}</li>
-                        	{/if}
-                        	{if $ban.view_delete}
-                          		<li class="button button-light">{$ban.delete_link}</li>
-                        	{/if}
-			{else}
-				<li>
-					<a class="button button-success" href='index.php?p=login'>Admin ? Sign In</a>
-				</li>
-			{/if}
+					  {if $view_bans}
+                        {if ($ban.view_edit && !$ban.unbanned)}
+                          <li class="button button-primary">{$ban.edit_link}</li>
+                        {/if}
+						{if $view_comments}
+                        <li class="button button-success">{$ban.addcomment}</li>
+						{/if}
+						{if ($ban.unbanned == false && $ban.view_unban)}
+                          <li class="button button-important">{$ban.unban_link}</li>
+                        {/if}
+                        {if $ban.unbanned && $ban.reban_link != false}
+                          <li class="button button-important">{$ban.reban_link}</li>
+                        {/if}
+                        {if $ban.view_delete}
+                          <li class="button button-important">{$ban.delete_link}</li>
+                        {/if}
+					{else}
+						<li>
+							<a class="button button-success" href='index.php?p=login'>Admin ? Sign In</a>
+						</li>
+					{/if}
                       </ul>
-
                       <ul class="ban_list_detal">
                         <li>
                           <span><i class="fas fa-user"></i> Player</span>
@@ -149,7 +151,6 @@
                         </li>
                         <li>
                           <span><i class="fab fa-steam-symbol"></i> Steam Community</span>
-
                           {if empty($ban.steamid)}
                             <span class="text:italic">No Steam Community ID present</span>
                           {else}
@@ -213,8 +214,8 @@
                           </li>
                         {/if}
 						<li>
-                                                        <span><i class="fas fa-server"></i> Blocked from </span>
-                                                            <span {if $ban.server_id != 0}id="host_{$ban.ban_id}"{/if}>
+                                                        <span><i class="fas fa-server"></i> Blocked from</span>
+                                                            <span {if $ban.server_id != 0} id="host_{$ban.ban_id}"{/if}>
 											{if $ban.server_id == 0}
 											Web Ban
 											{else}

@@ -2,7 +2,7 @@
   <div class="flex flex-jc:center flex-ai:center">
     <div class="layout_box layout_box_medium">
       <div class="layout_box_title">
-        <h2>{$commenttype} Comment</h2>
+        <h2><i class="fa-solid fa-comment"></i> {$commenttype} Comment</h2>
       </div>
 
       <div class="padding">
@@ -22,8 +22,8 @@
 
           <input type="hidden" name="page" id="page" value="{$page}">
 
-		  <a class="button button-light" onclick="history.go(-1)">Cancel</a>
-          <a class="button button-primary" onclick="ProcessComment();">Add</a>
+		  <a class="button button-important" onclick="history.go(-1)">Cancel</a>
+          <a class="button button-success" onclick="ProcessComment();">Add</a>
         </div>
       </div>
     </div>
@@ -102,13 +102,13 @@
                                         <div class="collapse_content">
                                             <div class="padding flex flex-jc:start">
                                                 <ul class="ban_action responsive_show:desktop">
-                                                    <li class="button button-primary">{$ban.demo_link}</li>
-                                                    {if $view_bans}
-                                                        {if $ban.unbanned && $ban.reban_link != false}
-                                                            <li class="button button-important">{$ban.reban_link}</li>
-                                                        {/if}
-                                                        <li class="button button-important">{$ban.blockcomm_link}</li>
-                                                        <li class="button button-success">{$ban.addcomment}</li>
+                                                    {if !$view_bans}
+                                                        <li class="button button-light">{$ban.demo_link}</li>
+                                                        <li>
+                                                            <a class="button button-success" href='index.php?p=login'>Admin ? Sign In</a>
+                                                        </li>
+													{else}
+                                                        <li class="button button-light">{$ban.demo_link}</li>
                                                         {if $ban.type == 0}
                                                             {if $groupban}
                                                                 <li class="button button-important">{$ban.groups_link}</li>
@@ -118,13 +118,18 @@
                                                             {/if}
                                                         {/if}
                                                         {if ($ban.view_edit && !$ban.unbanned)}
-                                                            <li class="button button-light">{$ban.edit_link}</li>
+                                                            <li class="button button-primary">{$ban.edit_link}</li>
                                                         {/if}
+                                                        <li class="button button-success">{$ban.addcomment}</li>
+                                                        <li class="button button-infos">{$ban.blockcomm_link}</li>
                                                         {if ($ban.unbanned == false && $ban.view_unban)}
-                                                            <li class="button button-light">{$ban.unban_link}</li>
+                                                            <li class="button button-important">{$ban.unban_link}</li>
+                                                        {/if}
+                                                        {if $ban.unbanned && $ban.reban_link != false}
+                                                            <li class="button button-important">{$ban.reban_link}</li>
                                                         {/if}
                                                         {if $ban.view_delete}
-                                                            <li class="button button-light">{$ban.delete_link}</li>
+                                                            <li class="button button-important">{$ban.delete_link}</li>
                                                         {/if}
                                                     {/if}
                                                 </ul>
@@ -232,11 +237,12 @@
 			    		                            <li>
                                                         <span><i class="fas fa-server"></i> Banned from </span>
                                                             <span {if $ban.server_id != 0} id="host_{$ban.ban_id}"{/if}>
-											{if $ban.server_id == 0}
-											Web Ban
-											{else}
-											Please Wait...
-											{/if}</span>
+                                                                {if $ban.server_id == 0}
+                                                                Web Ban
+                                                                {else}
+                                                                Please Wait...
+                                                                {/if}
+                                                            </span>
                                                     </li>
                                                     <li>
                                                         <span><i class="fas fa-ban"></i> Blocked ({$ban.blockcount})</span>
@@ -250,7 +256,7 @@
                                                 {if $view_comments}
                                                     <ul class="ban_list_comments margin-left responsive_show:desktop">
                                                         <div class="layout_box_title">
-                                                            <h2>Comments</h2>
+                                                            <h2><i class="fa-solid fa-comments"></i> Comments</h2>
                                                         </div>
                                                         {if $ban.commentdata != "None"}
                                                             <ul>
