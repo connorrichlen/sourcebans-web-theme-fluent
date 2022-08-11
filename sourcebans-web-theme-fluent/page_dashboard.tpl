@@ -119,7 +119,7 @@
             {foreach from=$players_blocked item=player}
               <tr class="collapse" {if $dashboard_lognopopup} onclick="{$player.link_url}" 
               {else}onclick="{$player.popup}"
-                {/if}>
+                {/if} onmouseout="this.className='tbl_out'" onmouseover="this.className='tbl_hover'" style="cursor: pointer;" id="{$player.server}" title="Querying Server Data...">
                 <td class="text:center">
                   <i class="fas fa-ban fa-lg"></i>
                 </td>
