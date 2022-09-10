@@ -25,6 +25,19 @@
           <a class="button button-important" onclick="history.go(-1)">Cancel</a>
 		  <a class="button button-success" onclick="ProcessComment();">Add</a>
         </div>
+        {foreach from="$othercomments" item="com"}
+            <div class="flex flex-jc:center flex-ai:center">
+                <div class="layout_box layout_box_medium padding">
+                    <hr>
+                <div>
+                    <span class=left><b>{$com.comname}</b></span>
+                    <span class=right><b>{$com.added}</b></span> 	
+                </div>
+                    {$com.commenttxt}
+                    {if $com.editname != ''}<br /><br /><i>Last edit {$com.edittime} by {$com.editname}</i>{/if}
+                </div>
+            </div>
+        {/foreach}
       </div>
     </div>
   </div>
