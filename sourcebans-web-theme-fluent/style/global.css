@@ -47,6 +47,27 @@
   --message-error: #c53030;
   --message-general: #70767d;
   --message-succes: #2a884b;
+  --sp-0: 0px;
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-7: 32px;
+  --sp-8: 40px;
+  --sp-9: 48px;
+  --sp-10: 64px;
+  --radius-1: 4px;
+  --radius-2: 8px;
+  --size-1: 20px;
+  --size-2: 24px;
+  --size-3: 30px;
+  --size-4: 36px;
+  --size-5: 44px;
+  --size-6: 56px;
+  --size-7: 72px;
+  --size-8: 92px;
 }
 
 * {
@@ -207,6 +228,20 @@ a:hover {
   }
 }
 
+div span.left, div span.right {
+	display:  inline-block;
+	width: 50%;
+}
+
+span.left {
+	float: left;
+}
+
+span.right {
+	float: right;
+	text-align: right;
+}
+
 .text\:center {
   text-align: center;
 }
@@ -342,7 +377,7 @@ a:hover {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  color-adjust: exact;
+  print-color-adjust: exact;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out,
  border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -479,7 +514,7 @@ a:hover {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  color-adjust: exact;
+  print-color-adjust: exact;
   cursor: pointer;
   -webkit-transition: background-color 0.15s ease-in-out, background-position 0.15s ease-in-out,
  border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
@@ -670,6 +705,10 @@ a:hover {
   border-top-left-radius: inherit;
   border-top-right-radius: inherit;
   color: #fff;
+}
+
+li.layout_box_title {
+    list-style-type: none;
 }
 
 .layout_box_title h2,
@@ -924,7 +963,7 @@ a:hover {
 }
 
 .nav ul li a::before {
-  content: '\f0c9';
+  /*content: '\f0c9';*/
   font-family: 'Font Awesome 6 Free';
   font-size: 14px;
   font-weight: 700;
@@ -1050,7 +1089,7 @@ a:hover {
 }
 
 .nav_mobile_tab_nav ul li a::before {
-  content: '\f0c9';
+  /*content: '\f0c9';*/
   font-family: 'Font Awesome 6 Free';
   font-size: 14px;
   font-weight: 700;
@@ -1179,8 +1218,14 @@ a:hover {
 /* =============== FORMS ==================== */
 .badentry {
   color: #cc0000;
-  width: 195px;
+  /*width: 195px;*/
   display: none;
+  font-weight: bold;
+}
+.badentry::before {
+  content: '\f071';
+  font-family: 'Font Awesome 6 Free';
+  color: #ffd43b;
 }
 
 /* ================ Popup Boxes ============== */
@@ -1378,7 +1423,7 @@ div.dialog-control {
   font-weight: 400;
   text-align: center;
   font-family: inherit;
-  padding: 5px 16px;
+  padding: 10px 20px;
   border-radius: var(--border--radius);
   color: #fff;
   position: relative;
@@ -1417,6 +1462,87 @@ div.dialog-control {
   border-color: #4fc1e9;
 }
 
+.msg-button {
+    float:right;
+    position:absolute;
+    top:85px;
+    left:480px;
+}
+.msgbox-border {
+    position:fixed !important;
+    position:absolute;
+    overflow:hidden;
+    top:250px;
+    padding:15px;
+    margin: auto 210px;
+    width: 520px;
+}
+#msg-red {
+    background-color:#000000;
+    border:#E80909 1px solid;
+    color:#E80909;
+    width: 500px;
+    padding: 8px;
+    height: 75px;
+    overflow:hidden;
+}
+
+#msg-red-debug {
+    background-color: #ffdd87;
+    border: 1px solid #ffce54;
+    color: #8a6d3b;
+    width: 100%;
+    padding: 8px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+#msg-blue-debug {
+    background-color: #7cd1ef;
+    border: 1px solid #4fc1e9;
+    color: #31708f;
+    width: 100%;
+    padding: 8px;
+    margin: 10px auto;
+    overflow: hidden;
+}
+
+#msg-red b, #msg-green b, #msg-blue b, #msg-red-debug b,#msg-blue-debug b, #msg-green-debug b {
+    font-size: 16px;
+}
+#msg-red i, #msg-blue i, #msg-green i, #msg-red-debug i, #msg-blue-debug i, #msg-green-dbg i {
+    float:left;
+    margin-right: 7px;
+}
+#msg-green {
+    background-color:#fcf7c9;
+    border:#339933 1px solid;
+    color:#339933;
+    width: 500px;
+    padding: 8px;
+    height: 75px;
+    overflow:hidden;
+}
+
+#msg-green-dbg {
+    background-color:#fcf7c9;
+    border:#339933 1px dotted;
+    color:#339933;
+    width: 75%;
+    padding: 8px;
+    margin: 10px auto;
+    overflow:hidden;
+}
+
+#msg-blue {
+    background-color:#fcf7c9;
+    border:#0066FF 1px solid;
+    color:#0066FF;
+    width: 500px;
+    padding: 8px;
+    height: 75px;
+    overflow:hidden;
+}
 #log_res {
   overflow: auto;
 }
@@ -1458,7 +1584,6 @@ div.dialog-control {
   height: 100px;
   width: 108px !important;
   width: 110px;
-  vertical-align: middle;
   text-decoration: none;
   padding: 2px 5px 1px 5px;
   margin-right: 10px;
@@ -1517,7 +1642,6 @@ div.dialog-control {
   display: block;
   height: 37px;
   width: 100px;
-  vertical-align: middle;
   text-decoration: none;
   border: 1px solid #ddd;
   padding: 7px 5px 1px 5px;
@@ -1612,7 +1736,7 @@ div.dialog-control {
 
 /** ================ Banlist ================ **/
 table.listtable {
-  font-family: Verdana, Arial, Tahoma, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+  font-family: Verdana, Arial, Tahoma, 'Trebuchet MS', Sans-Serif, Georgia, Courier, 'Times New Roman', Serif;
   font-size: 10px;
   border: 1px solid;
   border-color: transparent;
@@ -1620,7 +1744,7 @@ table.listtable {
 }
 
 table.listtable2 {
-  font-family: Verdana, Arial, Tahoma, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+  font-family: Verdana, Arial, Tahoma, 'Trebuchet MS', Sans-Serif, Georgia, Courier, 'Times New Roman', Serif;
   font-size: 10px;
   color: #000000;
   border: #c5c5c5 solid;
@@ -1628,7 +1752,7 @@ table.listtable2 {
 }
 
 table.listtable3 {
-  font-family: Verdana, Arial, Tahoma, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+  font-family: Verdana, Arial, Tahoma, 'Trebuchet MS', Sans-Serif, Georgia, Courier, 'Times New Roman', Serif;
   font-size: 11px;
   color: #000000;
   border: #c5c5c5 solid;
@@ -1647,7 +1771,7 @@ td.listtable_top {
 }
 */
 td.listtable_2 {
-  font-family: Verdana, Arial, Tahoma, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+  font-family: Verdana, Arial, Tahoma, 'Trebuchet MS', Sans-Serif, Georgia, Courier, 'Times New Roman', Serif;
   font-size: 10px;
   border: #ccc solid;
   border-width: 0px 0px 1px 1px;
@@ -1768,72 +1892,62 @@ td.listtable_2 {
 
 /** ======= Context Menu Styles ======= **/
 div.contextmenu {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-family: Verdana, Arial, Tahoma, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
-  background-color: #eaeaea;
-  border: 1px solid #dddddd;
-  border-left: 5px solid #dddddd;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 15px 1px rgba(69, 65, 78, .08);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 4px;
+    width: 10em;
+    padding-bottom: 2px
+}
+
+div.contextmenu .head {
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: #f2f8f9;
+    padding-top: 4px;
+    padding-right: 5px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    color: #b2002a
 }
 
 div.contextmenu a {
-  display: block;
-  text-decoration: none;
-  cursor: default;
-  outline: none;
-  font-size: 11px;
+    color: #222;
+    display: block;
+    text-decoration: none;
+    cursor: default;
+    outline: none;
+    font-size: 11px;
+    padding: 4px 15px;
+    margin: 0 2px
+}
+
+div.contextmenu a.disabled {
+    color: #bbb
+}
+
+div.contextmenu a.disabled:hover {
+    background: #f2feff
+}
+
+div.contextmenu a:hover {
+    background-color: #f2f8f9
 }
 
 div.contextmenu .separator {
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-}
-
-.contextmenu {
-  width: 12em;
-  /*background: #F4F5EB;*/
-  border-top: 1px solid #ddd;
-  /*border-left: 1px solid #ddd;*/
-  border-right: 1px solid #666;
-  border-bottom: 1px solid #666;
-  padding: 2px 0;
-}
-
-.contextmenu a {
-  color: #555;
-  padding: 4px 15px;
-  margin: 0 2px;
-}
-
-.contextmenu a:hover {
-  background-color: #f4f5eb;
-}
-
-.contextmenu a.disabled {
-  color: #bbb;
-}
-
-.contextmenu a.disabled:hover {
-  background: #f4f5eb;
-  color: #bbb;
-}
-
-.contextmenu .separator {
-  border-bottom: 1px solid #fff;
-  background: #999;
-  margin: 4px 4px;
-}
-
-.contextmenu .head {
-  font-size: 12px;
-  background-color: #dfe3e9;
-  padding-top: 4px;
-  padding-right: 5px;
-  padding-bottom: 3px;
-  padding-left: 5px;
-  color: #fff;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+    margin: 4px
 }
 
 .select {
@@ -1933,9 +2047,11 @@ hr {
 .admin_dashboard {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  -ms-grid-columns: minmax(400px, 1fr)[auto-fit];
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   grid-gap: 10px;
+  width: 100%;
+  overflow-x: auto;
 }
 
 .admin_tab {
@@ -2114,10 +2230,18 @@ hr {
           justify-content: space-evenly;
 }
 
+.flex-jc\:left {
+	justify-content: left;
+}
+
 .flex-jc\:center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.flex-jc\:right {
+	justify-content: right;
 }
 
 .flex-jc\:space-between {
@@ -2374,3 +2498,104 @@ hr {
   display: block;
 }
 /*# sourceMappingURL=global.css.map */
+
+/* ================ Custom - Message type ================ */
+/* Messages: to give the user information, warnings etc. */
+/* ======================================================== */
+/* BASE */
+
+.cMargin_vertical, .cMargin_bottom {
+    margin-bottom: var(--sp-5) !important;
+}
+
+.cMessage, .cAnnouncement {
+	border-radius: var(--radius-1);
+	position: relative;
+	margin-bottom: var(--sp-3);
+	color: #fff;
+	border: 1px solid rgba(0,0,0,0.1);
+	box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px;
+}
+
+html[dir="ltr"] .cMessage {
+	padding: var(--sp-4) var(--sp-4) var(--sp-4) var(--sp-9);
+}
+
+html[dir="rtl"] .cMessage {
+	padding: var(--sp-4) var(--sp-9) var(--sp-4) var(--sp-4);
+}
+
+.cMessage:before {
+  font-family: 'Font Awesome 6 Free';
+  position: absolute;
+  top: var(--sp-4);
+  font-size: 20px;
+  line-height: 1;
+}
+
+html[dir="ltr"] .cMessage:before {
+  left: var(--sp-4);
+}
+
+html[dir="rtl"] .cMessage:before {
+  right: var(--sp-4);
+}
+
+.cMessage :not(.cButton) {
+  color: inherit;
+}
+
+.cMessage_title {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  margin-bottom: var(--sp-1);
+}
+
+.cMessage a.cButton {
+  margin-top: -5px;
+}
+
+html[dir] .cMessage .cButton_link {
+	border-color: currentColor;
+	color: #fff;
+	opacity: 0.7;
+}
+	
+/* Styles a code displayed in some messages */
+.cMessage_code {
+	padding: 7px;
+	display: inline-block;
+	background: rgba(0,0,0,0.2);
+	border-radius: 3px;
+	margin-top: -7px;
+	color: rgba(255,255,255,0.8);
+}
+html[dir="rtl"] .cMessage_code {
+	float: left;
+	margin-right: -7px;
+}
+html[dir="rtl"] .cMessage_code {
+	float: left;
+	margin-left: -7px;
+}
+
+/* More types */
+.cMessage_info, .cMessage_information {
+    background: #1f7bbb;
+}
+
+.cMessage_general {
+    background: #70767d;
+}
+
+.cMessage_warning {
+    background: #e06d22;
+}
+
+.cMessage_success {
+    background: #2a884b;
+}
+.ban_list_comments_header .fa-trash {
+	color: red;
+}
