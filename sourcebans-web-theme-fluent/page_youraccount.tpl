@@ -14,7 +14,7 @@
 
                 <ul>
                     -{if $web_permissions}-
-                        -{foreach from=$web_permissions item=permission}-
+                        -{foreach from=$web_permissions item="permission"}-
                             <li>-{$permission}-</li>
                         -{/foreach}-
                     -{else}-
@@ -28,7 +28,7 @@
 
                 <ul>
                     -{if $server_permissions}-
-                        -{foreach from=$server_permissions item=permission}-
+                        -{foreach from=$server_permissions item="permission"}-
                             <li>-{$permission}-</li>
                         -{/foreach}-
                     -{else}-

@@ -51,7 +51,7 @@
       </div>
       <nav class="nav_mobile_tab_nav">
         <ul>
-            {foreach from=$navbar item=nav}
+            {foreach from=$navbar item="nav"}
                 <li class="{$nav.state}">
                     <a href="index.php?p={$nav.endpoint}" data-nav="{$nav.endpoint}">
                         {$nav.title}
@@ -59,7 +59,7 @@
                 </li>
             {/foreach}
 		    {if $isAdmin}
-                {foreach from=$adminbar item=admin}
+                {foreach from=$adminbar item="admin"}
 			        <li class="{$nav.state}">
 				        <a class="nav_link {$admin.state}" href="index.php?p=admin&c={$admin.endpoint}">
 					        {$admin.title}
@@ -101,7 +101,7 @@
                         <a href='index.php?p=account'><i class="fa-solid fa-gear"></i> Account Settings</a>
                     </li>
                 {/if}
-                    {foreach from=$navbar item=nav}
+                    {foreach from=$navbar item="nav"}
                     <li class="{$nav.state}">
                         <a href="index.php?p={$nav.endpoint}" data-nav="{$nav.endpoint}">
                         {$nav.title}
@@ -109,7 +109,7 @@
                     </li>
                     {/foreach}
                 {if $isAdmin}
-                    {foreach from=$adminbar item=admin}
+                    {foreach from=$adminbar item="admin"}
                         <li class="{$nav.state}">
                             <a class="nav_link {$admin.state}" href="index.php?p=admin&c={$admin.endpoint}">
                                 {$admin.title}

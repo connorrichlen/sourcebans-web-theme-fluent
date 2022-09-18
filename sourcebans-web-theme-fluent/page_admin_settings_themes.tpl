@@ -41,7 +41,7 @@
     </div>
 
     <ul class="margin-top">
-        {foreach from=$theme_list item=theme}
+        {foreach from=$theme_list item="theme"}
             <li><a href="javascript:void(0);" onclick="javascript:xajax_SelTheme('{$theme.dir}');"><b>{$theme.name}</b></a>
             </li>
         {/foreach}

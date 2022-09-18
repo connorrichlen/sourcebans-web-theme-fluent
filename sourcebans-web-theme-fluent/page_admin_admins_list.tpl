@@ -3,7 +3,7 @@
         Access Denied
     {else}
         <div class="admin_tab_content_title">
-            <h2>Admins - {$admin_count}</h2>
+            <h2><i class="fas fa-user-shield"></i> Admins - {$admin_count}</h2>
         </div>
 
         <div class="padding">
@@ -52,7 +52,7 @@
                                                         </li>
                                                         <li class="button button-light">
                                                             <a href="index.php?p=admin&c=admins&o=editpermissions&id={$admin.aid}">
-                                                                <i class="fas fa-subscript"></i> Edit Permissions
+                                                                <i class="fas fa-edit fa-lg"></i> Edit Permissions
                                                             </a>
                                                         </li>
                                                         <li class="button button-light">
@@ -67,7 +67,7 @@
                                                         </li>
                                                     {/if}
                                                     {if $permission_deleteadmin}
-                                                        <li class="button button-light">
+                                                        <li class="button button-important">
                                                             <a href="#" onclick="RemoveAdmin({$admin.aid}, '{$admin.user}');">
                                                                 <i class="fas fa-trash"></i> Delete Admin
                                                             </a>
@@ -79,7 +79,7 @@
                                                     <h3>Server Admin Permissions</h3>
                                                     <ul>
                                                         {if $admin.server_flag_string}
-                                                            {foreach from=$admin.server_flag_string item=permission}
+                                                            {foreach from=$admin.server_flag_string item="permission"}
                                                                 <li>{$permission}</li>
                                                             {/foreach}
                                                         {else}
@@ -92,7 +92,7 @@
                                                     <h3>Web Admin Permissions</h3>
                                                     <ul>
                                                         {if $admin.web_flag_string}
-                                                            {foreach from=$admin.web_flag_string item=permission}
+                                                            {foreach from=$admin.web_flag_string item="permission"}
                                                                 <li>{$permission}</li>
                                                             {/foreach}
                                                         {else}

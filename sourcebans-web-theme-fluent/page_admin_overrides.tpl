@@ -53,7 +53,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {foreach from=$overrides_list item=override}
+                            {foreach from=$overrides_list item="override"}
                                 <tr>
                                     <td>
                                         <select class="form-select form-full" name="override_type[]">

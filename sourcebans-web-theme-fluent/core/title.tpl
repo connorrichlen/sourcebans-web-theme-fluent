@@ -22,7 +22,7 @@
 </div>
 
 <div class="breadcrumb">
-    {foreach from=$breadcrumb item=crumb}
+    {foreach from=$breadcrumb item="crumb"}
         <i class="fas fa-angle-right"></i> <a href="{$crumb.url}">{$crumb.title}</a>
     {/foreach}
 </div>

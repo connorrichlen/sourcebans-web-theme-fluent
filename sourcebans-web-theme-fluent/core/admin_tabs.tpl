@@ -5,7 +5,7 @@
         </button>
 
         <div id="admin-page-menu" class="admin_tab_ul">
-            {foreach from=$tabs item=tab}
+            {foreach from=$tabs item="tab"}
                 <button onclick="openTab(this, '{$tab.name}');">{$tab.name}</button>
             {/foreach}
             <a href="index.php?p=admin">Back</a>

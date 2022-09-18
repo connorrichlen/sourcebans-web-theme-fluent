@@ -9,8 +9,7 @@
 	    </div>
 	    <div class="flex flex-fd:column text:right">
 	      <span>Copyright © (website name)</span>
-	      <span><i class="fas fa-code"></i> Original Theme by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">aXenDev</a></span>
-		  <span>Edited by <a href="https://github.com/Rushaway/" title="Rushaway's GitHub Profile" target="_blank" rel="noopener">.Rushaway </a>with <i class="fas fa-beer" title="Beer"></i></span>
+	      <span><i class="fas fa-code"></i> Original <a href="https://github.com/Rushaway/sourcebans-web-theme-fluent" title="Theme Fluent for SourceBans++" target="_blank" rel="noopener">Theme</a> by <a href="https://axendev.net/" title="Theme by aXenDev" target="_blank" rel="noopener">aXenDev</a></span>
 	    </div>
 	  </div>
 	</footer>

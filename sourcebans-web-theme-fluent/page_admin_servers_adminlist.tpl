@@ -12,7 +12,7 @@
                 </tr>
             </thead>
             <tbody>
-                {foreach from=$admin_list item=admin}
+                {foreach from=$admin_list item="admin"}
                     <tr class="collapse">
                         <td>
                             {$admin.user|escape:'html'}

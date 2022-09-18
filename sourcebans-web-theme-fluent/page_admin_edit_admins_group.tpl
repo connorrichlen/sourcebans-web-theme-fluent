@@ -20,7 +20,7 @@
                 <select name="wg" id="wg" class="form-select form-full">
                     <option value="-1">No Group</option>
                     <optgroup label="Groups" style="font-weight:bold;">
-                        {foreach from=$web_lst item=wg}
+                        {foreach from=$web_lst item="wg"}
                             <option value="{$wg.gid}" {if $wg.gid == $group_admin_id} selected="selected" {/if}>
                                 {$wg.name}</option>
                         {/foreach}
@@ -39,7 +39,7 @@
                     <option value="-1">No Group</option>
 
                     <optgroup label="Groups" style="font-weight:bold;">
-                        {foreach from=$group_lst item=sg}
+                        {foreach from=$group_lst item="sg"}
                             <option value="{$sg.id}" {if $sg.id == $server_admin_group_id} selected="selected" {/if}>
                                 {$sg.name}</option>
                         {/foreach}

@@ -3,7 +3,7 @@
         Access Denied
     {else}
         <div class="admin_tab_content_title">
-            <h2>Servers (<span id="srvcount">{$server_count}</span>)</h2>
+            <h2><i class="fas fa-server"></i> Servers (<span id="srvcount">{$server_count}</span>)</h2>
         </div>
 
         <div class="padding">
@@ -83,7 +83,7 @@
 
             {if $permission_addserver}
                 <div class="margin-top">
-                    <button class="button button-light" id="upload"
+                    <button class="button button-light" title="Click here to upload a screenshot of a map. Use the mapname as filename." id="upload"
                         onclick="childWindow=open('pages/admin.uploadmapimg.php','upload','resizable=yes,width=300,height=130');">
                         Upload Map Image
                     </button>

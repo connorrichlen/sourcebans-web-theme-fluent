@@ -15,7 +15,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from=$server_list item=server}
+                    {foreach from=$server_list item="server"}
                         <tr id="server_{$server.sid}" {if $IN_SERVERS_PAGE}class="collapse" {/if}>
                             <td class="text:center">
                                 <img src="images/games/{$server.icon}" alt="{$server.icon}" />

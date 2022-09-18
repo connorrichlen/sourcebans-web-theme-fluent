@@ -14,7 +14,7 @@
   </section>
   {else}
   <div class="admin_tab_content_title">
-    <h2>Add new admin</h2>
+    <h2><i class="fas fa-user-plus"></i> Add new admin</h2>
   </div>
 
   <div class="padding">

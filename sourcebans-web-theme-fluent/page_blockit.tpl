@@ -22,7 +22,7 @@
 <body style="
 	background-repeat: repeat-x;
 	color: #444;
-	font-family: Verdana, Arial, Tahoma, Trebuchet MS, Sans-Serif, Georgia, Courier, Times New Roman, Serif;
+	font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 	font-size: 11px;
 	line-height: 135%;
 	margin: 5px;
@@ -31,7 +31,7 @@
 <div id="container" name="container">
     <h3 style="font-size: 12px;">Searching for the player on all servers...</h3>
     <table border="0">
-        -{foreach from=$servers item=serv}-
+        -{foreach from=$servers item="serv"}-
         <tr>
             <td><div id="srvip_-{$serv.num}-"><font size="1">-{$serv.ip}-:-{$serv.port}-</font></div></td>
             <td>

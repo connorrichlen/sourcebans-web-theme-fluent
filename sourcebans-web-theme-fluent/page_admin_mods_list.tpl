@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2>Server Mods ({$mod_count})</h2>
+        <h2><i class="fas fa-gamepad"></i> Server Mods ({$mod_count})</h2>
     </div>
 
     <div class="padding">
