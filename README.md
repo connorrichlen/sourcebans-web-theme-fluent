@@ -1,11 +1,11 @@
 ![Header Github](https://raw.githubusercontent.com/Rushaway/sourcebans-web-theme-fluent/master/sourcebans-web-theme-fluent/screenshot.jpg)
 
-# Theme Fluent for SourceBans++ (8.1 Branch)
+# Theme Fluent for SourceBans++ (PHP 8.1 Branch)
 Fluent Design Theme Edition is a combination of Fluent Design styles Microsoft, iOS Design, Android Design and Google Design. We have also introduced many interesting features that are unique in standard themes.
 
 ## 🏷️ Requirements 
-- [SourceBans++ PHP8.1 Branch](https://github.com/sbpp/sourcebans-pp/tree/php81));
-- PHP 8.1+;
+- [SourceBans++ PHP 8.1 Branch](https://github.com/sbpp/sourcebans-pp/tree/php81)
+- PHP 8.1+
 
 ## 🧰 Install 
 1. Download all files from repository or clone:
@@ -20,9 +20,9 @@ git clone https://github.com/Rushaway/sourcebans-web-theme-fluent.git
 Reupload all files from repository.
 
 ## 🚀 Credits 
-Author: [aXenDeveloper](https://github.com/aXenDeveloper))
-[Hackmastr](https://github.com/Hackmastr))
-[Rushaway](https://github.com/Rushaway))
+- [aXenDeveloper](https://github.com/aXenDeveloper) (Author)
+- [Hackmastr](https://github.com/Hackmastr) (Update to PHP 8.1)
+- [Rushaway](https://github.com/Rushaway) (Maintainer) 
 
 ## 📷 Screenshots 
 ![1](https://raw.githubusercontent.com/Rushaway/sourcebans-web-theme-fluent/master/screenshots/1.png)
