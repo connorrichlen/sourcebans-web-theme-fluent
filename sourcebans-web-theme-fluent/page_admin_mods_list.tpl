@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-gamepad"></i> Server Mods ({$mod_count})</h2>
+        <h2>Server Mods ({$mod_count})</h2>
     </div>
 
     <div class="padding">
@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$mod_list" item="mod" name="gaben"}
+                    {foreach from=$mod_list item="mod" name="gaben"}
                         <tr id="mid_{$mod.mid}">
                             <td class="text:center">
                                 <img src="images/games/{$mod.icon}" alt="{$mod.mid}" />

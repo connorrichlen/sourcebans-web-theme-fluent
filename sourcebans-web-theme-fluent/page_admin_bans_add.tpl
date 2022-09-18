@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-user-times"></i> Add Ban</h2>
+        <h2>Add Ban</h2>
     </div>
 
     <div class="padding">
@@ -92,7 +92,7 @@
                 </optgroup>
                 {if $customreason}
                     <optgroup label="Custom">
-                        {foreach from="$customreason" item="creason"}
+                        {foreach from=$customreason item="creason"}
                             <option value="{$creason}">{$creason}</option>
                         {/foreach}
                     </optgroup>

@@ -1,19 +1,14 @@
 <div class="admin_tab_content_title">
-    <h2><i class="far fa-hdd"></i> System Logs</h2>
-</div>
-{php} require (TEMPLATES_PATH . "/admin.log.search.php");{/php}
-
-<div class="layout_box padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
-    <span>
-        <i>{$clear_logs}</i>
-    </span>
-        <div class="pagination">
-            <span>{$page_numbers}</span>
-        </div>
+    <h2>System Log {$clear_logs}</h2>
 </div>
 
 <div class="padding">
-    
+    {load_template file="admin.log.search"}
+
+    <div class="pagination">
+        <span>{$page_numbers}</span>
+    </div>
+
     <div class="table table_box">
         <table>
             <thead>
@@ -25,7 +20,7 @@
                 </tr>
             </thead>
             <tbody>
-                {foreach from="$log_items" item="log"}
+                {foreach from=$log_items item="log"}
                     <tr class="collapse">
                         <td class="text:center">{$log.type_img}</td>
                         <td>{$log.title}</td>

@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-gavel"></i> Ban Submissions (<span id="subcount">{$submission_count}</span>)</h2>
+        <h2>Ban Submissions (<span id="subcount">{$submission_count}</span>)</h2>
     </div>
 
     <div class="padding">
@@ -35,7 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$submission_list" item="sub"}
+                    {foreach from=$submission_list item="sub"}
                         <tr class="collapse" {if $sub.hostname == ""}
                             onclick="xajax_ServerHostPlayers('{$sub.server}', 'id', 'sub{$sub.subid}');" {/if}>
                             <td>

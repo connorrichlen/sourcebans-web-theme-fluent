@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-gavel"></i> Ban Protests (<span id="protcount">{$protest_count}</span>)</h2>
+        <h2>Ban Protests (<span id="protcount">{$protest_count}</span>)</h2>
     </div>
 
     <div class="padding">
@@ -35,7 +35,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$protest_list" item="protest"}
+                    {foreach from=$protest_list item="protest"}
                         <tr class="collapse">
                             <td>
                                 {$protest.name}

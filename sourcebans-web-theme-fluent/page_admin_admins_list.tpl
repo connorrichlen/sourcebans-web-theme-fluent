@@ -3,13 +3,13 @@
         Access Denied
     {else}
         <div class="admin_tab_content_title">
-            <h2><i class="fas fa-user-shield"></i> Admins - {$admin_count}</h2>
+            <h2>Admins - {$admin_count}</h2>
         </div>
 
         <div class="padding">
             <span>Click on an admin to see more detailed information and actions to perform on them.</span>
 
-            {php} require (TEMPLATES_PATH . "/admin.admins.search.php");{/php}
+            {load_template file="admin.admins.search"}
 
             <div class="flex flex-jc:end flex-ai:center margin-bottom:half">
                 {$admin_nav}
@@ -28,7 +28,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {foreach from="$admins" item="admin"}
+                            {foreach from=$admins item="admin"}
                                 <tr class="collapse">
                                     <td>{$admin.user} (<a href="./index.php?p=banlist&advSearch={$admin.aid}&advType=admin"
                                             title="Show bans">{$admin.bancount} bans</a> | <a

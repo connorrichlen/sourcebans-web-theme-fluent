@@ -13,7 +13,7 @@
     </section>
 {else}
     <div class="admin_tab_content_title">
-        <h2><i class="fas fa-users"></i> Groups</h2>
+        <h2>Groups</h2>
     </div>
 
     <div class="padding">
@@ -21,7 +21,7 @@
             Click on a group to view its permissions.
         </div>
 
-        <h3 style="color: var(--table-permanent-text);">Web Admin Groups ({$web_group_count})</h3>
+        <h3>Web Admin Groups ({$web_group_count})</h3>
 
         <div class="table table_box">
             <table>
@@ -33,7 +33,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$web_group_list" item="group" name="web_group"}
+                    {foreach from=$web_group_list item="group" name="web_group"}
                         <tr class="collapse">
                             <td style="width: 350px;">
                                 {$group.name}
@@ -117,7 +117,8 @@
                 </tbody>
             </table>
         </div>
-        	<h3 style="color: var(--table-unbanned-text);">Server Admin Groups ({$server_admin_group_count})</h3>
+
+        <h3>Server Admin Groups ({$server_admin_group_count})</h3>
 
         <div class="table table_box">
             <table>
@@ -129,7 +130,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$server_group_list" item="group" name="server_admin_group"}
+                    {foreach from=$server_group_list item="group" name="server_admin_group"}
                         <tr class="collapse">
                             <td style="width: 350px;">
                                 {$group.name}
@@ -247,7 +248,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    {foreach from="$server_list" item="group" name="server_group"}
+                    {foreach from=$server_list item="group" name="server_group"}
                         <tr class="collapse">
                             <td style="width: 350px;">
                                 {$group.name}
