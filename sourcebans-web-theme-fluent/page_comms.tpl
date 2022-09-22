@@ -114,16 +114,16 @@
                     <div class="padding flex flex-jc:start">
                       <ul class="ban_action responsive_show:desktop">
 					  {if $view_bans}
-                        {if ($ban.view_edit && !$ban.unbanned)}
+                        {if ($ban.view_edit && (!isset($ban.unbanned) || !$ban.unbanned))}
                           <li class="button button-primary">{$ban.edit_link}</li>
                         {/if}
 						{if $view_comments}
                         <li class="button button-success">{$ban.addcomment}</li>
 						{/if}
-						{if ($ban.unbanned == false && $ban.view_unban)}
+						{if (isset($ban.unbanned) && $ban.unbanned == false && $ban.view_unban)}
                           <li class="button button-important">{$ban.unban_link}</li>
                         {/if}
-                        {if $ban.unbanned && $ban.reban_link != false}
+						{if isset($ban.unbanned) && $ban.reban_link != false}
                           <li class="button button-important">{$ban.reban_link}</li>
                         {/if}
                         {if $ban.view_delete}
@@ -181,10 +181,10 @@
                           <span><i class="fas fa-hourglass-half"></i> Block length</span>
                           <span>{$ban.banlength}</span>
                         </li>
-                        {if $ban.unbanned}
+                        {if isset($ban.unbanned)}
                           <li>
                             <span><i class="fas fa-user-shield"></i> Unblock reason</span>
-                            {if $ban.ureason == ""}
+                            {if !isset($ban.ureason) || $ban.ureason == ""}
                               <span class="text:italic">No reason present</span>
                             {else}
                               <span>{$ban.ureason}</span>
