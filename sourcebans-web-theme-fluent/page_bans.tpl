@@ -6,7 +6,7 @@
       </div>
 
       <div class="padding">
-        <textarea class="form-text" id="commenttext" name="commenttext">{$commenttext}</textarea>
+        <textarea class="form-text" id="commenttext" name="commenttext" {if !$canedit}disabled{/if}>{$commenttext}</textarea>
 
         <div id="commenttext.msg" class="message message:error" style="display:none;"></div>
 
@@ -22,8 +22,10 @@
 
           <input type="hidden" name="page" id="page" value="{$page}">
 
+		{if $canedit}
 		  <a class="button button-important" onclick="history.go(-1)">Cancel</a>
           <a class="button button-success" onclick="ProcessComment();">Add</a>
+		{/if}
         </div>
         {foreach from=$othercomments item="com"}
             <div class="flex flex-jc:center flex-ai:center">
