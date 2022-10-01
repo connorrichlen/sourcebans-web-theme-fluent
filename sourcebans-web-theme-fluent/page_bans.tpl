@@ -117,12 +117,12 @@
                                         <div class="collapse_content">
                                             <div class="padding flex flex-jc:start">
                                                 <ul class="ban_action responsive_show:desktop">
-                                                    {if !$view_bans}
+                                                    {if !$login}
                                                         <li class="button button-light">{$ban.demo_link}</li>
                                                         <li>
                                                             <a class="button button-success" href='index.php?p=login'>Admin ? Sign In</a>
                                                         </li>
-													{else}
+													{elseif $view_bans}
                                                         <li class="button button-light">{$ban.demo_link}</li>
                                                         {if ($ban.view_edit && !$ban.unbanned)}
                                                             <li class="button button-primary">{$ban.edit_link}</li>
