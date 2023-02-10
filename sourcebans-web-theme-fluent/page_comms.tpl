@@ -83,11 +83,6 @@
                     <td class="text:italic">No nickname present</td>
                   {else}
 				  <td>
-                      {if $view_bans}
-                          <div style="float:right">
-                              {$ban.counts}
-                          </div>
-                      {/if}
                       {if $view_comments && $ban.commentdata != "None" && $ban.commentdata|@count > 0}
                           <div style="float:right">
                               {$ban.commentdata|@count} <i class="fas fa-clipboard-list fa-lg"></i>
@@ -128,7 +123,7 @@
 						{if $view_comments}
                         <li class="button button-success">{$ban.addcomment}</li>
 						{/if}
-						{if (isset($ban.unbanned) && $ban.unbanned == false && $ban.view_unban)}
+						{if ($ban.unbanned == false && $ban.view_unban)}
                           <li class="button button-important">{$ban.unban_link}</li>
                         {/if}
 						{if isset($ban.unbanned) && $ban.reban_link != false}
@@ -247,7 +242,13 @@
                                                     </li>
                         <li>
                           <span><i class="fas fa-ban"></i> Total Blocks</span>
-                          <span>{$ban.prevoff_link}</span>
+                          <span>{$ban.prevoff_link}
+						  	{if $view_bans}
+                          		{if $ban.counts > 0 || $ban.commentdata != "None"}
+                              		<div>&nbsp;[{$ban.counts} ]</div>
+								{/if}
+                      		{/if}
+						</span>
                         </li>
                       </ul>
 
