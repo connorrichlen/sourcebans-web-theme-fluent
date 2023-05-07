@@ -219,7 +219,7 @@
                                                     {foreach from=$server_overrides_list[$smarty.foreach.server_admin_group.index] item="override"}
                                                         <tr>
                                                             <td>{$override.type}</td>
-                                                            <td>{$override.name|htmlspecialchars}</td>
+                                                            <td>{$override.name|smarty_htmlspecialchars}</td>
                                                             <td>{$override.access}</td>
                                                         </tr>
                                                     {/foreach}

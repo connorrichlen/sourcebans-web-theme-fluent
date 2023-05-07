@@ -48,7 +48,7 @@
 
   <div class="layout_box margin-bottom padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
     <span>
-      <a href="index.php?p=commslist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|htmlspecialchars}"
+      <a href="index.php?p=commslist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|smarty_htmlspecialchars}"
         title="{$hidetext} inactive">{$hidetext} inactive</a> | <i>Total Blocks: {$total_bans}</i>
     </span>
     <div class="pagination">
@@ -91,7 +91,7 @@
                       {if empty($ban.player)}
                         <span class="text:italic">No nickname present</span>
                       {else}
-                        <span>{$ban.player|escape:'html'|stripslashes}</span>
+                        <span>{$ban.player|escape:'html'|smarty_stripslashes}</span>
                       {/if}
                     </td>
                   {/if}
@@ -145,7 +145,7 @@
                           {if empty($ban.player)}
                             <span class="text:italic">No nickname present</span>
                           {else}
-                            <span>{$ban.player|escape:'html'|stripslashes}</span>
+                            <span>{$ban.player|escape:'html'|smarty_stripslashes}</span>
                           {/if}
                         </li>
                         <li>

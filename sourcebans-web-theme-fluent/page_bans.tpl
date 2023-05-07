@@ -48,7 +48,7 @@
 
 <div class="layout_box margin-bottom padding:half flex flex-jc:space-between flex-ai:center m:flex-fd:column">
     <span>
-        <a href="index.php?p=banlist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|htmlspecialchars}" title="{$hidetext} inactive">{$hidetext} inactive</a> | <i>Total Bans: {$total_bans} </i>
+        <a href="index.php?p=banlist&hideinactive={if $hidetext == 'Hide'}true{else}false{/if}{$searchlink|smarty_htmlspecialchars}" title="{$hidetext} inactive">{$hidetext} inactive</a> | <i>Total Bans: {$total_bans} </i>
     </span>
         <div class="pagination">
             <span>{$ban_nav}</span>
@@ -100,7 +100,7 @@
                                         {if $ban.demo_available}
                                             <i class="fas fa-video fa-lg"></i>
                                         {/if}
-                                        {$ban.player|escape:'html'|stripslashes}
+                                        {$ban.player|escape:'html'|smarty_stripslashes}
                                     </td>
                                 {/if}
                                 {if !$hideadminname}
@@ -153,7 +153,7 @@
                                                             {if empty($ban.player)}
                                                             <span class="text:italic">No nickname present</span>
                                                         {else}
-                                                            <span>{$ban.player|escape:'html'|stripslashes}</span>
+                                                            <span>{$ban.player|escape:'html'|smarty_stripslashes}</span>
                                                         {/if}
                                                     </li>
                                                     <li>

@@ -39,13 +39,13 @@
                                 <img src="images/games/{$mod.icon}" alt="{$mod.mid}" />
                             </td>
                             <td>
-                                {$mod.name|htmlspecialchars}
+                                {$mod.name|smarty_htmlspecialchars}
                             </td>
                             <td>
-                                {$mod.modfolder|htmlspecialchars}
+                                {$mod.modfolder|smarty_htmlspecialchars}
                             </td>
                             <td class="text:center">
-                                {$mod.steam_universe|htmlspecialchars}
+                                {$mod.steam_universe|smarty_htmlspecialchars}
                             </td>
                             {if $permission_editmods || $permission_deletemods}
                                 <td class="flex flex:ai:center flex-jc:center">
@@ -56,7 +56,7 @@
                                         </a>
                                     {/if}
                                     {if $permission_deletemods}
-                                        <button onclick="RemoveMod('{$mod.name|escape:'quotes'|htmlspecialchars}', '{$mod.mid}');"
+                                        <button onclick="RemoveMod('{$mod.name|escape:'quotes'|smarty_htmlspecialchars}', '{$mod.mid}');"
                                             class="button button-light">
                                             Delete
                                         </button>

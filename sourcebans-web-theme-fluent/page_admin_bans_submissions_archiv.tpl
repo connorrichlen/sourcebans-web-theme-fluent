@@ -53,7 +53,7 @@
                                 {if $sub.archiv != "2" and $sub.archiv != "3"}
                                     {if $permissions_editsub}
                                         <button class="button button-success margin-right:half"
-                                            onclick="RemoveSubmission({$sub.subid}, '{$sub.name|stripslashes}', '2');">
+                                            onclick="RemoveSubmission({$sub.subid}, '{$sub.name|smarty_stripslashes}', '2');">
                                             Restore
                                         </button>
                                     {/if}
@@ -70,7 +70,7 @@
 
                                 {if $permissions_editsub}
                                     <button class="button button-important margin-right:half"
-                                        onclick="RemoveSubmission({$sub.subid}, '{$sub.name|stripslashes}', '0');">
+                                        onclick="RemoveSubmission({$sub.subid}, '{$sub.name|smarty_stripslashes}', '0');">
                                         Delete
                                     </button>
                                 {/if}

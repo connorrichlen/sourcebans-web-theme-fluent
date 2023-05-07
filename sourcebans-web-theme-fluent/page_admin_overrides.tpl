@@ -65,11 +65,11 @@
                                         <input type="hidden" name="override_id[]" value="{$override.id}" />
                                     </td>
                                     <td>
-                                        <input name="override_name[]" value="{$override.name|htmlspecialchars}"
+                                        <input name="override_name[]" value="{$override.name|smarty_htmlspecialchars}"
                                             class="form-input form-full" />
                                     </td>
                                     <td>
-                                        <input name="override_flags[]" value="{$override.flags|htmlspecialchars}"
+                                        <input name="override_flags[]" value="{$override.flags|smarty_htmlspecialchars}"
                                             class="form-input form-full" />
                                     </td>
                                 </tr>

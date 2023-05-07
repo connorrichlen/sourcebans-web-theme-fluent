@@ -61,7 +61,7 @@
 
                                 {if $permissions_editsub}
                                     <button class="button button-success margin-right:half"
-                                        onclick="RemoveSubmission({$sub.subid}, '{$sub.name|stripslashes}', '1');return false;">
+                                        onclick="RemoveSubmission({$sub.subid}, '{$sub.name|smarty_stripslashes}', '1');return false;">
                                         Archive
                                     </button>
                                 {/if}
