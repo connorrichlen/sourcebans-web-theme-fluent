@@ -27,7 +27,7 @@
     }
 
     &\:succes {
-        background-color: var(--message-succes);
+        background-color: var(--message-success);
 
         &::before {
             content: '\f00c';
