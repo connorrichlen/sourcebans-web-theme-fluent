@@ -199,6 +199,10 @@ a:hover {
   background-color: var(--layout_main--color);
 }
 
+.button-gametracker {
+  background-color: var(--button-gametracker);
+}
+
 .button-light,
 .ok-light {
   background-color: var(--button-light);
