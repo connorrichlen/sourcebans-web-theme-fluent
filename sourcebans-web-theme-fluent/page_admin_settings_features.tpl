@@ -119,6 +119,21 @@
             </div>
         </div>
 
+        <div class="margin-bottom:half">
+            <input type="checkbox" name="enable_gametracker" class="form-check" id="enable_gametracker" />
+
+            <label for="enable_gametracker" class="form-label form-label:left">
+                Enable GameTracker button
+            </label>
+
+            <div class="form-desc">
+                Check this box, if you want a GameTracker button to appear in the server list for each server.
+            </div>
+
+            <div id="enable_gametracker.msg" class="message message:error margin-top:half" style="display: none;">
+            </div>
+        </div>
+
         <div class="flex flex-ai:center flex-jc:space-between">
             {sb_button text="Save Changes" class="button button-success" id="fsettings" submit=true}
             {sb_button text="Back" class="button button-light" id="fback"}
