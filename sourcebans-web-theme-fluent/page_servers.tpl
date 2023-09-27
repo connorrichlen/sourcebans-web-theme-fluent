@@ -16,6 +16,10 @@
 					<th>Players</th>
 					<th>Map</th>
 					<th class="responsive_show:desktop">Connect</th>
+
+		                        {if (Config::getBool('config.enablegametracker')) }
+		                        <th class="responsive_show:desktop">GameTracker</th>
+		                        {/if}
 				</tr>
 			</thead>
 			<tbody>
@@ -34,6 +38,12 @@
 					<a class="button button-success" href="steam://connect/{$server.ip}:{$server.port}"><i
 						class="fa fa-sign-in"></i> Connect</a>
 				</td>
+				{if (Config::getBool('config.enablegametracker')) }
+	                        <td class="text:center responsive_show:desktop">
+					<a class="button button-error" href="https://www.gametracker.com/server_info/{$server.ip}:{$server.port}/" target="_blank"><i
+	                                        class="fa fa-search"></i> GameTracker</a>
+	                        </td>
+	                        {/if}
 				</tr>
 				<tr>
 					<td colspan="8" align="center">
